@@ -21,6 +21,9 @@ body {
     #background{
         opacity: 0.6;
     }
+    body{
+        overflow-y: auto;
+    }
 }
 
 h1 {
