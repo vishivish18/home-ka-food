@@ -1,0 +1,32 @@
+@import url('http://db.onlinewebfonts.com/c/016f50054d487d421dc18257a191a3ad?family=Noteworthy');
+@font-face {
+    font-family: "Noteworthy";
+    src: url("http://db.onlinewebfonts.com/t/016f50054d487d421dc18257a191a3ad.eot");
+    src: url("http://db.onlinewebfonts.com/t/016f50054d487d421dc18257a191a3ad.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/016f50054d487d421dc18257a191a3ad.woff") format("woff"), url("http://db.onlinewebfonts.com/t/016f50054d487d421dc18257a191a3ad.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/016f50054d487d421dc18257a191a3ad.svg#Noteworthy") format("svg");
+}
+
+* {
+    padding: 0;
+    margin: 0
+}
+
+body {
+    font-family: 'Noteworthy', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow: hidden;
+    /*background-image: url("/images/background.png");
+    background-repeat: no-repeat;*/
+}
+
+h1 {
+    color: #000;
+}
+
+p {
+    color: #000;
+}
+
+.top-buffer {
+    margin-top: 20px;
+}
