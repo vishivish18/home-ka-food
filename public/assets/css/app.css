@@ -37,3 +37,7 @@ p {
 .top-buffer {
     margin-top: 20px;
 }
+.call-now:hover{
+    cursor: pointer;
+    color: blue
+}
