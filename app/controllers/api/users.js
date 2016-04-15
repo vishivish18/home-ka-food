@@ -24,10 +24,9 @@ router.post('/', function(req, res, next) {
 
 
 router.get('/', function(req, res, next) {
-    /*if (!req.headers('x-auth')) {
+    if (!req.headers['x-auth']) {
         return res.send(401)
-    }*/
-
+    }
 
     var auth = jwt.decode(req.headers['x-auth'], config.secret)
     Admin.findOne({

@@ -41,6 +41,11 @@ angular.module('app')
         .state('admin', {
             url: '/admin',
             views: {
+                'nav':{
+                    templateUrl: '/nav.html',
+                    controller: 'adminCtrl'
+                    
+                },
                 'content': {
                     templateUrl: '/admin.html',
                     controller: 'adminCtrl'

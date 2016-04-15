@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: 'Noteworthy', sans-serif;
+    /*font-family: 'Noteworthy', sans-serif;*/
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     overflow: hidden;
@@ -18,10 +18,10 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
-    #background{
+    #background {
         opacity: 0.6;
     }
-    body{
+    body {
         overflow-y: auto;
     }
 }
@@ -37,7 +37,12 @@ p {
 .top-buffer {
     margin-top: 20px;
 }
-.call-now:hover{
+
+.call-now:hover {
     cursor: pointer;
     color: blue
+}
+
+.noteworthy{
+    font-family: 'Noteworthy', sans-serif;
 }

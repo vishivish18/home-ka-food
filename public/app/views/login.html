@@ -68,25 +68,27 @@ form[role=login] input:-ms-input-placeholder {
     color: #8899a6;
 }
 </style>
-<div class="container">
-    <section class="login-form">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <form role="login" ng-submit="login(username, password)">
-                    <p align="center"><img src="/images/logo.png" height="140" width="140"></p>
-                    <h2 align="center">Home Ka Food</h2>
-                    <label>Enter your email address</label>
-                    <input type="email" name="email" placeholder="you@email.com" ng-model="username" required class="form-control input-lg" />
-                    <label>Enter your password</label>
-                    <input type="password" name="password" placeholder="Password" ng-model="password" required class="form-control input-lg" />
-                    <br>
-                    <button style="background-color: #F1592A" type="submit" name="go" class="btn btn-lg btn-block btn-primary">Log in</button>
-                    <div ng-if="authFail" class="alert alert-warning" role="alert">You have entered wrong credentials</div>
-                </form>
-            </div>
-            <!-- <div class="panel-footer">
+<div id="landing" class="noteworthy">
+    <div class="container">
+        <section class="login-form">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form role="login" ng-submit="login(username, password)">
+                        <p align="center"><img src="/images/logo.png" height="140" width="140"></p>
+                        <h2 align="center">Home Ka Food</h2>
+                        <label>Enter your email address</label>
+                        <input type="email" name="email" placeholder="you@email.com" ng-model="username" required class="form-control input-lg" />
+                        <label>Enter your password</label>
+                        <input type="password" name="password" placeholder="Password" ng-model="password" required class="form-control input-lg" />
+                        <br>
+                        <button style="background-color: #F1592A" type="submit" name="go" class="btn btn-lg btn-block btn-primary">Log in</button>
+                        <div ng-if="authFail" class="alert alert-warning" role="alert">You have entered wrong credentials</div>
+                    </form>
+                </div>
+                <!-- <div class="panel-footer">
                 Don't have an account ? <a href="#">Register now &raquo;</a>                
             </div> -->
-        </div>
-    </section>
+            </div>
+        </section>
+    </div>
 </div>

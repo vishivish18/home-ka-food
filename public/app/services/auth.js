@@ -39,6 +39,7 @@ angular.module('app')
         function logout() {
             localStorage.removeItem('user_token');
             localStorage.removeItem('logged_user');
+            $window.sessionStorage.removeItem('user_token');
             delete $http.defaults.headers.common['x-auth']
             $rootScope.isLogged = false;
             $rootScope.currentUser = null;

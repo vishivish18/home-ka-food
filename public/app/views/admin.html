@@ -1,17 +1,26 @@
 <style type="text/css">
-    body{
-        overflow-y:auto !important;
-    }
+body {
+    overflow-y: auto !important;
+}
 </style>
 <div class="container">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-offset-11 pull-right">           
+            <p style="cursor: pointer" ng-click="logout()">Logout</p>
+        </div>
+    </div>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="page-header">
                 <h3>User List</h3>
+                <div ng-if="authFail" class="alert alert-warning" role="alert">Oops ! Something Went Wrong, Taking you to login page</div>
             </div>
         </div>
     </div>
     <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <a class="btn btn-primary btn-sm pull-left" ui-sref=".vehicles">+ Add New User</a>
+        </div>
         <div class="col-sm-offset-8 col-md-offest-8 col-sm-4 col-md-4 ">
             <input type="text" class="form-control input-sm" ng-model="searchUsers" placeholder="Search User" />
         </div>
