@@ -14,6 +14,8 @@ app.use(bodyParser.urlencoded({
     extended: true
 })); // support encoded bodies
 app.use('/api/users', require('./app/controllers/api/users'))
+app.use('/api/admin', require('./app/controllers/api/admin'))
+app.use('/api/sessions', require('./app/controllers/api/sessions'))
 app.use('/', require('./app/controllers/static'))
 
 
