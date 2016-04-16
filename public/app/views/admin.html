@@ -3,12 +3,7 @@ body {
     overflow-y: auto !important;
 }
 </style>
-<div class="container">
-    <div class="row">
-        <div class="col-md-offset-1 col-md-offset-11 pull-right">           
-            <p style="cursor: pointer" ng-click="logout()">Logout</p>
-        </div>
-    </div>
+<div class="container top-buffer">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="page-header">
@@ -19,9 +14,9 @@ body {
     </div>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
-            <a class="btn btn-primary btn-sm pull-left" ui-sref=".vehicles">+ Add New User</a>
+            <a class="btn btn-primary btn-sm pull-right" ui-sref=".new">+ Add New User</a>
         </div>
-        <div class="col-sm-offset-8 col-md-offest-8 col-sm-4 col-md-4 ">
+        <div class="col-sm-offset-8 col-md-offest-8 col-sm-4 col-md-4 top-buffer">
             <input type="text" class="form-control input-sm" ng-model="searchUsers" placeholder="Search User" />
         </div>
     </div>
@@ -35,16 +30,22 @@ body {
             <table class="table table-hover table-striped table-bordered ">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Email</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
                         <th>Phone Number</th>
+                        <th>Address</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr ng-repeat="user in model | filter:searchUsers">
-                        <td>{{user.name}}</td>
-                        <td>{{user.email}}</td>
+                        <td>{{user.first_name}}</td>
+                        <td>{{user.last_name}}</td>
                         <td>{{user.phone}}</td>
+                        <td>{{user.address}}</td>
+                        <td><a href="" ui-sref=".details({id:user._id})"><span class="glyphicon glyphicon-pencil edit"></span></a></td>
+                        <td><a href="" ng-click="deleteUser(user._id)"><span class="glyphicon glyphicon-trash delete"></span></a></td>
                 </tbody>
             </table>
         </div>

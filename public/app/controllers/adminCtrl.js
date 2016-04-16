@@ -23,6 +23,20 @@ angular.module('app')
 
         $scope.setup();
 
+        $scope.deleteUser = function(user_id) {
+            if (!confirm('Are you sure?')) return;
+            $http.delete('/api/users/' + user_id)
+                .then(function(response) {
+                    console.log(response)
+                    $scope.setup();
+
+                }, function(response) {
+                    console.log(response)
+                        // if error occurs
+                });
+
+        }
+
 
         $scope.logout = function() {
             auth.logout()

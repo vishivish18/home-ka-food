@@ -41,10 +41,10 @@ angular.module('app')
         .state('admin', {
             url: '/admin',
             views: {
-                'nav':{
+                'nav': {
                     templateUrl: '/nav.html',
                     controller: 'adminCtrl'
-                    
+
                 },
                 'content': {
                     templateUrl: '/admin.html',
@@ -52,6 +52,29 @@ angular.module('app')
 
                 }
             }
+        })
+
+        .state('admin.new', {
+            url: '/new',
+            views: {
+                'content@': {
+                    templateUrl: '/addUser.html',
+                    controller: 'addUserCtrl'
+                }
+            }
+
+        })
+
+        .state('admin.details', {
+            url: '/:id',
+
+            views: {
+                'content@': {
+                    templateUrl: 'editUser.html',
+                    controller: 'editUserCtrl'
+                }
+            }
+
         })
 
 
