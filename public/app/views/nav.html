@@ -15,6 +15,7 @@
         </ul> -->
         <div id="navbar" class="navbar-collapse collapse">
             <div ng-if="currentUser" class="nav navbar-nav navbar-right" role="form">
+                <li><a href="/admin"><span class="glyphicon glyphicon-th-list"></span>&nbsp;&nbsp;List</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;{{currentUser}}</a></li>
                 <li><a class="logout" href="#" ng-click="logout()"><span class="glyphicon glyphicon-log-out" ></span>&nbsp;&nbsp;Logout</a></li>
             </div>
